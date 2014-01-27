@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<?eclipse version="3.4"?>
+<plugin>
+   
+  <extension point="org.eclipse.ui.menus">
+     
+    <menuContribution allPopups="false" locationURI="popup:org.eclipse.jdt.ui.CompilationUnitEditor.EditorContext">
+       
+      <command commandId="net.xiangzhao.plugins.test.jrunnerplugin.runjul" label="Perform TAIR" style="push">
+         
+ <!--       <visibleWhen checkEnabled="false">
+           
+          <with variable="activeMenuSelection">
+             
+            <iterate ifEmpty="false" operator="or">
+               
+              <adapt type="org.eclipse.core.resources.IResource">
+                 
+                <test property="org.eclipse.core.resources.name" value="*.jul"/>
+                 
+              </adapt>
+             
+            </iterate>
+             
+          </with>
+           
+        </visibleWhen> -->
+         
+      </command>
+       
+    </menuContribution>
+     
+  </extension>
+   
+  <extension point="org.eclipse.ui.commands">
+     
+    <command defaultHandler="net.xiangzhao.plugins.test.jrunnerplugin.handler.RunJULHandler" id="net.xiangzhao.plugins.test.jrunnerplugin.runjul" name="runjul">
+       
+    </command>
+     
+  </extension>
+   
+</plugin>
